@@ -6,18 +6,18 @@
   <title>first title</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="#1.Minimize HTTP Requests 减少HTTP请求图片、css、script、flash等等这些都会增加http请求数，减少这些元素的数量就能减少响应时间。把多个JS、CSS在可能的情况下写进一个文件，页面里直接写入图片也是不好的做法，应该写进CSS里，利用 CSS sprites 将小图拼合后利用background来定位。
-  #2.Use a Content Deliv">
+#2.Use a Content Delivery">
 <meta property="og:type" content="website">
 <meta property="og:title" content="first title">
 <meta property="og:url" content="http://davidxyw.github.io/web优化34军规高亮文本.html">
 <meta property="og:site_name" content="first title">
 <meta property="og:description" content="#1.Minimize HTTP Requests 减少HTTP请求图片、css、script、flash等等这些都会增加http请求数，减少这些元素的数量就能减少响应时间。把多个JS、CSS在可能的情况下写进一个文件，页面里直接写入图片也是不好的做法，应该写进CSS里，利用 CSS sprites 将小图拼合后利用background来定位。
-  #2.Use a Content Deliv">
-<meta property="og:updated_time" content="2016-03-16T16:00:20.018Z">
+#2.Use a Content Delivery">
+<meta property="og:updated_time" content="2016-03-16T16:07:40.221Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="first title">
 <meta name="twitter:description" content="#1.Minimize HTTP Requests 减少HTTP请求图片、css、script、flash等等这些都会增加http请求数，减少这些元素的数量就能减少响应时间。把多个JS、CSS在可能的情况下写进一个文件，页面里直接写入图片也是不好的做法，应该写进CSS里，利用 CSS sprites 将小图拼合后利用background来定位。
-  #2.Use a Content Deliv">
+#2.Use a Content Delivery">
   
     <link rel="alternate" href="/atom.xml" title="first title" type="application/atom+xml">
   
@@ -61,7 +61,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://davidxyw.github.io"></form>
@@ -73,7 +73,7 @@
         <section id="main"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/web优化34军规高亮文本.html" class="article-date">
-  <time datetime="2016-03-16T16:00:20.018Z" itemprop="datePublished">2016-03-17</time>
+  <time datetime="2016-03-16T16:07:40.221Z" itemprop="datePublished">2016-03-17</time>
 </a>
     
   </div>
@@ -82,15 +82,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>  #1.Minimize HTTP Requests 减少HTTP请求<br>图片、css、script、flash等等这些都会增加http请求数，减少这些元素的数量就能减少响应时间。把多个JS、CSS在可能的情况下写进一个文件，页面里直接写入图片也是不好的做法，应该写进CSS里，利用 CSS sprites 将小图拼合后利用background来定位。</p>
-<p>  #2.Use a Content Delivery Network 利用CDN技术<br>CDN 确实是好东西，8过服务器提供商的这项服务一般是要收费的，我以前买的国内空间是有这个的但是我当时根本不知道啥用，现在没了。。。</p>
-<p>  #3.Add an Expires or a Cache-Control Header 设置头文件过期或者静态缓存<br>浏览器会用缓存来减少http请求数来加快页面加载的时间，如果页面头部加一个很长的过期时间，浏览器就会一直缓存页面里的元素。不过这样如果 页面里的东西变动的话就要改名字了，否则用户端不会主动刷新，看自己衡量了~ 这项可以通过修改.htaccess文件来实现。</p>
-<p>  #4.Gzip Components Gzip压缩<br>Gzip格式是一种很普遍的压缩技术，几乎所有的浏览器都有解压Gzip格式的能力，而且它可以压缩的比例非常大，一般压缩率为85%。压缩没压缩，可以到 这里 做下测试。</p>
-<p> #5.Put Stylesheets at the Top 把CSS放顶部<br>让浏览者能尽早的看到网站的完整样式。</p>
-<p>  #6.Put Scripts at the Bottom 把JS放底部<br>网站呈现完毕后再进行功能设置，当然这些JS要在你的加载过程中不影响内容表现。</p>
-<p>  #7.Avoid CSS Expressions 避免CSS Expressions<br>CSS表达式很可怕，这个只被IE支持的东西执行时候的运算量非常大，你移动一下鼠标它都要进行重计算的，但有时候为了做浏览器的兼容必须要用到这个||| IE6去死去死！~</p>
-<p>  #8.Make JavaScript and CSS External 将JS和CSS外链<br>前面讲到了缓存这个事情，一些较为公用的JS和CSS，我们可以使用外链的形式，譬如我就是从Google外链来的Jquery文件，如果我的浏览者在浏览别的使用了这个外链文件的网站时已经下载并缓存了这个文件，那么他在浏览我的网站的时候就不需要再进行下载了！~</p>
-<p>  #9.Reduce DNS Lookups 减少DNS查找<br>貌似是要减少网站从外部调用资源，我的Google分析和picasa的外链图片都算在里面了。</p>
+        <p>#1.Minimize HTTP Requests 减少HTTP请求<br>图片、css、script、flash等等这些都会增加http请求数，减少这些元素的数量就能减少响应时间。把多个JS、CSS在可能的情况下写进一个文件，页面里直接写入图片也是不好的做法，应该写进CSS里，利用 CSS sprites 将小图拼合后利用background来定位。</p>
+<p>#2.Use a Content Delivery Network 利用CDN技术<br>CDN 确实是好东西，8过服务器提供商的这项服务一般是要收费的，我以前买的国内空间是有这个的但是我当时根本不知道啥用，现在没了。。。</p>
+<p>#3.Add an Expires or a Cache-Control Header 设置头文件过期或者静态缓存<br>浏览器会用缓存来减少http请求数来加快页面加载的时间，如果页面头部加一个很长的过期时间，浏览器就会一直缓存页面里的元素。不过这样如果 页面里的东西变动的话就要改名字了，否则用户端不会主动刷新，看自己衡量了~ 这项可以通过修改.htaccess文件来实现。</p>
+<p>#4.Gzip Components Gzip压缩<br>Gzip格式是一种很普遍的压缩技术，几乎所有的浏览器都有解压Gzip格式的能力，而且它可以压缩的比例非常大，一般压缩率为85%。压缩没压缩，可以到 这里 做下测试。</p>
+<p>#5.Put Stylesheets at the Top 把CSS放顶部<br>让浏览者能尽早的看到网站的完整样式。</p>
+<p>#6.Put Scripts at the Bottom 把JS放底部<br>网站呈现完毕后再进行功能设置，当然这些JS要在你的加载过程中不影响内容表现。</p>
+<p>#7.Avoid CSS Expressions 避免CSS Expressions<br>CSS表达式很可怕，这个只被IE支持的东西执行时候的运算量非常大，你移动一下鼠标它都要进行重计算的，但有时候为了做浏览器的兼容必须要用到这个||| IE6去死去死！~</p>
+<p>#8.Make JavaScript and CSS External 将JS和CSS外链<br>前面讲到了缓存这个事情，一些较为公用的JS和CSS，我们可以使用外链的形式，譬如我就是从Google外链来的Jquery文件，如果我的浏览者在浏览别的使用了这个外链文件的网站时已经下载并缓存了这个文件，那么他在浏览我的网站的时候就不需要再进行下载了！~</p>
+<p>#9.Reduce DNS Lookups 减少DNS查找<br>貌似是要减少网站从外部调用资源，我的Google分析和picasa的外链图片都算在里面了。</p>
 <p>#10.Minify JavaScript and CSS 减小JS和CSS的体积<br>写JS和CSS都是有技巧的，用最少的代码实现同样的功能，减少空白，增强逻辑性，用缩写方式等等，当然也有不少工具也能够帮你实现这一点。</p>
 <h1 id="11-Avoid-Redirects-避免重定向"><a href="#11-Avoid-Redirects-避免重定向" class="headerlink" title="11. Avoid Redirects 避免重定向"></a>11. Avoid Redirects 避免重定向</h1><p>再写入链接时，虽然”<a href="http://www" target="_blank" rel="external">http://www</a>. today-s-ooxx. com”和”<a href="http://www" target="_blank" rel="external">http://www</a>. today-s-ooxx. com/” 仅有一个最后的”/”只差，但是结果是不同的，服务器需要花时间把前者重定向为后者然后进行跳转，这个要自己注意，也可以在Apache里用Alias 或者mod_rewrite或者DirectorySlash解决。</p>
 <h1 id="12-Remove-Duplicate-Scripts-删除重复脚本"><a href="#12-Remove-Duplicate-Scripts-删除重复脚本" class="headerlink" title="12. Remove Duplicate Scripts 删除重复脚本"></a>12. Remove Duplicate Scripts 删除重复脚本</h1><p>重复调用的代码浏览器并不会识别忽略，而是会再次运算一遍，这当然是大大的浪费。</p>
@@ -122,7 +122,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://davidxyw.github.io/web优化34军规高亮文本.html" data-id="cilv1f9y20000ccqw44iocmvz" class="article-share-link">Delen</a>
+      <a data-url="http://davidxyw.github.io/web优化34军规高亮文本.html" data-id="cilv1n1mt0000yoqw58plerv6" class="article-share-link">Share</a>
       
       
     </footer>
@@ -146,7 +146,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archieven</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a></li></ul>
     </div>
@@ -156,12 +156,12 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recente berichten</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
           <li>
-            <a href="/2016/03/16/雅虎WEB前端网站优化-34条军规/">雅虎WEB前端网站优化----34条军规</a>
+            <a href="/2016/03/17/web前端开发之网站优化的34军规(高亮文本)/">(no title)</a>
           </li>
         
           <li>
