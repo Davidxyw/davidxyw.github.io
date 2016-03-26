@@ -57,7 +57,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://davidxyw.github.io"></form>
@@ -67,6 +67,49 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-数组去重的方法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/03/25/数组去重的方法/" class="article-date">
+  <time datetime="2016-03-24T18:03:24.901Z" itemprop="datePublished">2016-03-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>第一种是比较常规的方法</p>
+<p>思路：</p>
+<p>1.构建一个新的数组存放结果</p>
+<p>2.for循环中每次从原数组中取出一个元素，用这个元素循环与结果数组对比</p>
+<p>3.若结果数组中没有该元素，则存到结果数组中</p>
+<h1 id="Array-prototype-unique1-function"><a href="#Array-prototype-unique1-function" class="headerlink" title="Array.prototype.unique1 = function(){"></a>Array.prototype.unique1 = function(){</h1><h1 id="var-res-this-0"><a href="#var-res-this-0" class="headerlink" title="var res = [this[0]];"></a>var res = [this[0]];</h1><h1 id="for-var-i-1-i-lt-this-length-i"><a href="#for-var-i-1-i-lt-this-length-i" class="headerlink" title="for(var i = 1; i &lt; this.length; i++){"></a>for(var i = 1; i &lt; this.length; i++){</h1><h1 id="var-repeat-false"><a href="#var-repeat-false" class="headerlink" title="var repeat = false;"></a>var repeat = false;</h1><h1 id="for-var-j-0-j-lt-res-length-j"><a href="#for-var-j-0-j-lt-res-length-j" class="headerlink" title="for(var j = 0; j &lt; res.length; j++){"></a>for(var j = 0; j &lt; res.length; j++){</h1><h1 id="if-this-i-res-j"><a href="#if-this-i-res-j" class="headerlink" title="if(this[i] == res[j]){"></a>if(this[i] == res[j]){</h1><h1 id="repeat-true"><a href="#repeat-true" class="headerlink" title="repeat = true;"></a>repeat = true;</h1><h1 id="break"><a href="#break" class="headerlink" title="break;"></a>break;</h1><h1 id=""><a href="#" class="headerlink" title="}"></a>}</h1><h1 id="-1"><a href="#-1" class="headerlink" title="}"></a>}</h1><h1 id="if-repeat"><a href="#if-repeat" class="headerlink" title="if(!repeat){"></a>if(!repeat){</h1><h1 id="res-push-this-i"><a href="#res-push-this-i" class="headerlink" title="res.push(this[i]);"></a>res.push(this[i]);</h1><h1 id="-2"><a href="#-2" class="headerlink" title="}"></a>}</h1><h1 id="-3"><a href="#-3" class="headerlink" title="}"></a>}</h1><h1 id="return-res"><a href="#return-res" class="headerlink" title="return res;"></a>return res;</h1><h1 id="-4"><a href="#-4" class="headerlink" title="}"></a>}</h1><h1 id="var-arr-1-‘a’-‘a’-‘b’-‘d’-‘e’-‘e’-1-0"><a href="#var-arr-1-‘a’-‘a’-‘b’-‘d’-‘e’-‘e’-1-0" class="headerlink" title="var arr = [1, ‘a’, ‘a’, ‘b’, ‘d’, ‘e’, ‘e’, 1, 0]"></a>var arr = [1, ‘a’, ‘a’, ‘b’, ‘d’, ‘e’, ‘e’, 1, 0]</h1><h1 id="alert-arr-unique1"><a href="#alert-arr-unique1" class="headerlink" title="alert(arr.unique1());"></a>alert(arr.unique1());</h1><p>第二种方法比上面的方法效率要高</p>
+<p>思路：</p>
+<p>1.先将原数组进行排序</p>
+<p>2.检查原数组中的第i个元素 与 结果数组中的最后一个元素是否相同，因为已经排序，所以重复元素会在相邻位置</p>
+<p>3.如果不相同，则将该元素存入结果数组中</p>
+<h1 id="Array-prototype-unique2-function"><a href="#Array-prototype-unique2-function" class="headerlink" title="Array.prototype.unique2 = function(){"></a>Array.prototype.unique2 = function(){</h1><h1 id="this-sort-先排序"><a href="#this-sort-先排序" class="headerlink" title="this.sort(); //先排序"></a>this.sort(); //先排序</h1><h1 id="var-res-this-0-1"><a href="#var-res-this-0-1" class="headerlink" title="var res = [this[0]];"></a>var res = [this[0]];</h1><h1 id="for-var-i-1-i-lt-this-length-i-1"><a href="#for-var-i-1-i-lt-this-length-i-1" class="headerlink" title="for(var i = 1; i &lt; this.length; i++){"></a>for(var i = 1; i &lt; this.length; i++){</h1><h1 id="if-this-i-res-res-length-1"><a href="#if-this-i-res-res-length-1" class="headerlink" title="if(this[i] !== res[res.length - 1]){"></a>if(this[i] !== res[res.length - 1]){</h1><h1 id="res-push-this-i-1"><a href="#res-push-this-i-1" class="headerlink" title="res.push(this[i]);"></a>res.push(this[i]);</h1><h1 id="-5"><a href="#-5" class="headerlink" title="}"></a>}</h1><h1 id="-6"><a href="#-6" class="headerlink" title="}"></a>}</h1><h1 id="return-res-1"><a href="#return-res-1" class="headerlink" title="return res;"></a>return res;</h1><h1 id="-7"><a href="#-7" class="headerlink" title="}"></a>}</h1><h1 id="var-arr-1-‘a’-‘a’-‘b’-‘d’-‘e’-‘e’-1-0-1"><a href="#var-arr-1-‘a’-‘a’-‘b’-‘d’-‘e’-‘e’-1-0-1" class="headerlink" title="var arr = [1, ‘a’, ‘a’, ‘b’, ‘d’, ‘e’, ‘e’, 1, 0]"></a>var arr = [1, ‘a’, ‘a’, ‘b’, ‘d’, ‘e’, ‘e’, 1, 0]</h1><h1 id="alert-arr-unique2"><a href="#alert-arr-unique2" class="headerlink" title="alert(arr.unique2());"></a>alert(arr.unique2());</h1><p>第二种方法也会有一定的局限性，因为在去重前进行了排序，所以最后返回的去重结果也是排序后的。如果要求不改变数组的顺序去重，那这种方法便不可取了。</p>
+<p>第三种方法（推荐使用）</p>
+<p>思路：</p>
+<p>1.创建一个新的数组存放结果</p>
+<p>2.创建一个空对象</p>
+<p>3.for循环时，每次取出一个元素与对象进行对比，如果这个元素不重复，则把它存放到结果数组中，同时把这个元素的内容作为对象的一个属性，并赋值为1，存入到第2步建立的对象中。</p>
+<p>说明：至于如何对比，就是每次从原数组中取出一个元素，然后到对象中去访问这个属性，如果能访问到值，则说明重复。</p>
+<h1 id="Array-prototype-unique3-function"><a href="#Array-prototype-unique3-function" class="headerlink" title="Array.prototype.unique3 = function(){"></a>Array.prototype.unique3 = function(){</h1><h1 id="var-res"><a href="#var-res" class="headerlink" title="var res = [];"></a>var res = [];</h1><h1 id="var-json"><a href="#var-json" class="headerlink" title="var json = {};"></a>var json = {};</h1><h1 id="for-var-i-0-i-lt-this-length-i"><a href="#for-var-i-0-i-lt-this-length-i" class="headerlink" title="for(var i = 0; i &lt; this.length; i++){"></a>for(var i = 0; i &lt; this.length; i++){</h1><h1 id="if-json-this-i"><a href="#if-json-this-i" class="headerlink" title="if(!json[this[i]]){"></a>if(!json[this[i]]){</h1><h1 id="res-push-this-i-2"><a href="#res-push-this-i-2" class="headerlink" title="res.push(this[i]);"></a>res.push(this[i]);</h1><h1 id="json-this-i-1"><a href="#json-this-i-1" class="headerlink" title="json[this[i]] = 1;"></a>json[this[i]] = 1;</h1><h1 id="-8"><a href="#-8" class="headerlink" title="}"></a>}</h1><h1 id="-9"><a href="#-9" class="headerlink" title="}"></a>}</h1><h1 id="return-res-2"><a href="#return-res-2" class="headerlink" title="return res;"></a>return res;</h1><h1 id="-10"><a href="#-10" class="headerlink" title="}"></a>}</h1><h1 id="var-arr-112-112-34-’你好’-112-112-34-’你好’-’str’-’str1’"><a href="#var-arr-112-112-34-’你好’-112-112-34-’你好’-’str’-’str1’" class="headerlink" title="var arr = [112,112,34,’你好’,112,112,34,’你好’,’str’,’str1’];"></a>var arr = [112,112,34,’你好’,112,112,34,’你好’,’str’,’str1’];</h1><h1 id="alert-arr-unique3"><a href="#alert-arr-unique3" class="headerlink" title="alert(arr.unique3());"></a>alert(arr.unique3());</h1>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://davidxyw.github.io/2016/03/25/数组去重的方法/" data-id="cim8imjn60000z0qw89yocfll" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-front-end" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -84,7 +127,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://davidxyw.github.io/2016/03/20/front-end/" data-id="cim8iluqs0000wkqwgtoc18j4" class="article-share-link">Delen</a>
+      <a data-url="http://davidxyw.github.io/2016/03/20/front-end/" data-id="cim8iluqs0000wkqwgtoc18j4" class="article-share-link">Share</a>
       
       
     </footer>
@@ -156,7 +199,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://davidxyw.github.io/2016/03/17/web前端开发之网站优化的34军规(高亮文本)/" data-id="cim8iluro0002wkqwu74o2rfu" class="article-share-link">Delen</a>
+      <a data-url="http://davidxyw.github.io/2016/03/17/web前端开发之网站优化的34军规(高亮文本)/" data-id="cim8iluro0002wkqwu74o2rfu" class="article-share-link">Share</a>
       
       
     </footer>
@@ -201,7 +244,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://davidxyw.github.io/2016/03/07/hello-world/" data-id="cim8ilur80001wkqwexcigkt2" class="article-share-link">Delen</a>
+      <a data-url="http://davidxyw.github.io/2016/03/07/hello-world/" data-id="cim8ilur80001wkqwexcigkt2" class="article-share-link">Share</a>
       
       
     </footer>
@@ -226,7 +269,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archieven</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a></li></ul>
     </div>
@@ -236,9 +279,13 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recente berichten</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2016/03/25/数组去重的方法/">(no title)</a>
+          </li>
         
           <li>
             <a href="/2016/03/20/front-end/">(no title)</a>
